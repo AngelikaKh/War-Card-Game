@@ -10,9 +10,12 @@ import SwiftUI
 struct ContentView: View {
     var body: some View {
         Text("Hi, Angelika")
-            .blur(radius: 1.0)
-            .padding()
-            .background(Color.blue)
+            .opacity(0.6)
+            .padding(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/)
+            .background(/*@START_MENU_TOKEN@*//*@PLACEHOLDER=View@*/Color.gray
+                                                                        .blur(radius: 5.0)/*@END_MENU_TOKEN@*/)
+            
+            
     }
 }
 
