@@ -10,33 +10,62 @@ import SwiftUI
 struct ContentView: View {
     var body: some View {
         
-        VStack(spacing: 100.0) { //HStack ZStack
+        ZStack {
+            Image("background")
             
-            Spacer()
-            
-            Image("logo")
-                .resizable()
-                .aspectRatio(contentMode: .fit)
-            
-            Spacer()
-            
-            HStack {
-                
+            VStack {
                 Spacer()
-                Text("Hello, Earth!")
-                    .blur(radius: 1.0)
 
-                 
+                Image("logo")
+                
                 Spacer()
                 
-                Text("Hello, Mars!")
-                    .padding(.horizontal)
-                    .opacity(0.6)
-                    .border(/*@START_MENU_TOKEN@*/Color.gray/*@END_MENU_TOKEN@*/, width: 1)
+                HStack {
+                    Spacer()
+                    Image("card2")
+                    
+                    Spacer()
+                    
+                    Image("card3")
+                    Spacer()
+                }
+                
+                Spacer()
+
+                Image("dealbutton")
+                
+                Spacer()
+
+                HStack {
+                    
+                    Spacer()
+                    
+                    VStack {
+                        Text("Player")
+                            .font(.headline)
+                            .foregroundColor(Color.white)
+                            .padding(.bottom, 10.0)
+                        Text("0")
+                            .font(.largeTitle)
+                            .foregroundColor(Color.white)
+                    }
+                    
+                    Spacer()
+                    
+                    VStack {
+                        Text("CPU")
+                            .font(.headline)
+                            .foregroundColor(Color.white)
+                            .padding(.bottom, 10.0)
+                        Text("0")
+                            .font(.largeTitle)
+                            .foregroundColor(Color.white)
+                    }
+                    
+                    Spacer()
+                }
                 Spacer()
             }
-            
-            Spacer()
         }
     }
 }
